@@ -1,0 +1,35 @@
+{
+    "name": "samuel-stidham/sorted-linked-list",
+    "description": "PHP library providing a type-safe SortedLinkedList that maintains sorted order for int, string, or Sortable objects.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SamuelStidham\\LinkedList\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SamuelStidham\\LinkedList\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Samuel Stidham",
+            "email": "samuel.stidham@snhu.edu"
+        }
+    ],
+    "require-dev": {
+        "phpcompatibility/php-compatibility": "*",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^12.4",
+        "friendsofphp/php-cs-fixer": "^3.88"
+    },
+    "prefer-stable": true,
+    "scripts": {
+        "analyse": "phpstan analyse --memory-limit=1G src tests",
+        "cs": "phpcs --standard=PSR12 src tests",
+        "fix-cs": "php-cs-fixer fix --config=.php-cs-fixer.dist.php src tests",
+        "test": "XDEBUG_MODE=coverage php -d zend.assertions=1 -d assert.exception=1 vendor/bin/phpunit --coverage-html reports/coverage"
+    }
+}
