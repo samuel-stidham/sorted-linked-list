@@ -29,6 +29,8 @@
     "scripts": {
         "analyse": "phpstan analyse --memory-limit=1G src tests",
         "cs": "phpcs --standard=PSR12 src tests",
+        "cs-check": "phpcs --standard=PSR12 src tests -v --colors",
+        "cs-report": "phpcs --standard=PSR12 --report=summary src tests",
         "fix-cs": "php-cs-fixer fix --config=.php-cs-fixer.dist.php src tests",
         "test": "XDEBUG_MODE=coverage php -d zend.assertions=1 -d assert.exception=1 vendor/bin/phpunit --coverage-html reports/coverage"
     }

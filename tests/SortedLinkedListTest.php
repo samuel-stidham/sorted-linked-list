@@ -5,25 +5,8 @@ declare(strict_types=1);
 namespace SamuelStidham\LinkedList\Tests;
 
 use PHPUnit\Framework\TestCase;
-use SamuelStidham\LinkedList\Contracts\Sortable;
 use SamuelStidham\LinkedList\LinkedListException;
 use SamuelStidham\LinkedList\SortedLinkedList;
-
-class CustomSortableItem implements Sortable
-{
-    public function __construct(public int $id, public string $name)
-    {
-    }
-
-    public function compareTo(Sortable|int|string $other): int
-    {
-        if ($other instanceof self) {
-            return $this->id <=> $other->id;
-        }
-
-        return 0;
-    }
-}
 
 class SortedLinkedListTest extends TestCase
 {
