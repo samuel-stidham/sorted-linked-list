@@ -1,12 +1,12 @@
 # SortedLinkedList PHP Library
 
-## 🚀 ShipMonk Backend Engineer Technical Challenge
+## ShipMonk Backend Engineer Technical Challenge
 
 This repository contains the solution to the ShipMonk technical challenge: implementing a generic, type-safe, and sorted linked list library in PHP. The implementation focuses on **maintainability**, **usability**, and **modern PHP best practices**.
 
 The core implementation uses a recursive, functional approach to insertion and removal, ensuring the list always remains sorted.
 
-## ✨ Key Features & Best Practices
+## Key Features & Best Practices
 
 - **Sorted Data Structure:** Values are always maintained in ascending order upon insertion.
 - **Type Safety:** Prevents mixing `int` and `string` values after the list's type is established.
@@ -14,7 +14,7 @@ The core implementation uses a recursive, functional approach to insertion and r
 - **PHP Idioms:** Implements standard PHP interfaces (`\Countable` and `\IteratorAggregate`) for native functions like `count($list)` and `foreach ($list as $item)`.
 - **Immutable Nodes:** Nodes are designed to be immutable, improving state predictability.
 
-## 🛠️ Technology Stack & Tooling
+## Technology Stack & Tooling
 
 To demonstrate senior-level PHP skills and compliance with standard engineering practices, the project is configured with the following tools:
 
